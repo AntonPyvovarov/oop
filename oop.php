@@ -26,6 +26,23 @@ class Car
     public $model;
     public $year;
     public $driver;
+    private $price;
+
+    public function setPrice($price){
+        $this->price=$price;
+    }
+
+    public function getPrice(){
+        if($this->price==true){
+            echo $this->numberFormat();
+        }
+
+    }
+
+    public function numberFormat(){
+        $number=rand(5,10);
+        echo  $number;
+    }
 
     public function showBrand(){
         echo $this->brand;
@@ -34,32 +51,10 @@ class Car
         echo $this->model;
     }
 }
-$anton=new User;
-$roma=new User;
-$toyotaCorolla=new Car;
-$mazda6=new Car;
+
+
+
 $fordTaurus=new Car;
+$fordTaurus->setPrice(true);
+ $fordTaurus->getPrice();
 
-//$toyotaCorolla->driver=$anton;
-//var_dump($toyotaCorolla);
-print_r($anton->login().'<br>' ) ;
-print_r($anton->logOut().'<br>');
-
-
-
-
-
-
-//
-//$a='Hello';
-//$obj=(object)$a;
-//var_dump($obj);
-//echo $obj->scalar.'<br>';
-//
-//$a=['name'=>'mike','married'=> false];
-//$obj=(object)$a;
-//var_dump($obj);
-//echo $obj->name.'<br>';
-//
-//$arr=['name'=>'Anton','email'=>'Antopyva87@gmail.com','message'=>'Good Day!'];
-//var_dump($obj=(object)$arr);
